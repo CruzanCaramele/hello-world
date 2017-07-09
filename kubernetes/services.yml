@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nodejs-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+spec:
+  selector:
+    app: nodejs-hello-world
+  ports:
+  - port: 80
+    targetPort: 3000
+    nodePort: 31993
+    protocol: TCP
+  type: LoadBalancer
+  clusterIP: 10.254.50.157
+  externalIPs:
+    - 172.31.45.245
+    - 172.31.32.163

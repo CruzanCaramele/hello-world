@@ -14,6 +14,7 @@ test:
   pre:
     - npm install
   override:
+    - npm test
     - docker run -d -p 3000:3000 cruzancaramele/hello-node:latest; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 

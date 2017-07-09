@@ -4,7 +4,7 @@
   "description": "Hello world app taken from: https://expressjs.com/en/starter/hello-world.html",
   "main": "server.js",
   "scripts": {
-    
+    "test": "echo \"No test in this example\"",
     "start": "node server.js"
   },
   "repository": {

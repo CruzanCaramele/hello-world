@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nodejs-hello-world
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: nodejs-hello-world
+    spec:
+      containers:
+      - name: nodejs
+        image: cruzancaramele/hello-node:latest
+        ports:
+        - containerPort: 3000

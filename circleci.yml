@@ -11,14 +11,11 @@ dependencies:
     - docker build --rm=false -t cruzancaramele/hello-node:latest .
 
 test:
-  pre:
-    - npm install
   post:
     - docker run -d -p 3000:3000 cruzancaramele/hello-node:latest; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:3000
 
 deployment:
-  hub:
     branch: master
     commands:
       - docker login -e $EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD

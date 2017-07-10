@@ -27,3 +27,6 @@ The application is currently live and can be accessed using the DNS name of the 
 ###Alerts configured:
 ![alerts](alerts.png)
 
+
+3. For Continuous Integration/Delivery [CircleCI](https://circleci.com/) has been used. The [file](https://github.com/CruzanCaramele/hello-world/blob/master/circleci.yml) runs a test for the node application and also builds a new docker image to be pushed into docker hub to keep the image updated.
+

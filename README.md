@@ -17,15 +17,15 @@ The application is currently live and can be accessed using the DNS name of the 
 2. For monitoring, it is best to use tool/tools that have 1st class capabilities of monitoring containers. As such in the case, the open source tool [Sysdig](https://www.sysdig.org/) is used.
 
 ###kubernetes pods monitoring:
-![kubernetes pods](/img/pods.png)
+![kubernetes pods](/img/pods.PNG)
 
 
 ###Nodes monitoring:
-![nodes](/img/nodes.png)
+![nodes](/img/nodes.PNG)
 
 
 ###Alerts configured:
-![alerts](/img/alerts.png)
+![alerts](/img/alerts.PNG)
 
 
 3. For Continuous Integration/Delivery [CircleCI](https://circleci.com/) has been used. The [file](https://github.com/CruzanCaramele/hello-world/blob/master/circleci.yml) runs a test for the node application and also builds a new docker image to be pushed into docker hub to keep the image updated.

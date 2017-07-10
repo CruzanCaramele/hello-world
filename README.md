@@ -14,4 +14,16 @@ To deploy the application in a high-avaialble environment (on AWS in this case),
 The application is currently live and can be accessed using the DNS name of the AWS load balancer **node-js-app-1430382382.us-east-2.elb.amazonaws.com**
 
 
-2. 
+2. For monitoring, it is best to use tool/tools that have 1st class capabilities of monitoring containers. As such in the case, the open source tool [Sysdig](https://www.sysdig.org/) is used.
+
+###kubernetes pods monitoring:
+![kubernetes pods](pods.png)
+
+
+###Nodes monitoring:
+![nodes](nodes.png)
+
+
+###Alerts configured:
+![alerts](alerts.png)
+

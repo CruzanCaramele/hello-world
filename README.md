@@ -14,19 +14,34 @@ To deploy the application in a high-avaialble environment (on AWS in this case),
 The application is currently live and can be accessed using the DNS name of the AWS load balancer **node-js-app-1430382382.us-east-2.elb.amazonaws.com**
 
 
+
+
 2. For monitoring, it is best to use tool/tools that have 1st class capabilities of monitoring containers. As such in the case, the open source tool [Sysdig](https://www.sysdig.org/) is used.
 
-###kubernetes pods monitoring:
+### kubernetes pods monitoring:
 ![kubernetes pods](/img/pods.PNG)
 
 
-###Nodes monitoring:
+
+
+### Nodes monitoring:
 ![nodes](/img/nodes.PNG)
 
 
-###Alerts configured:
+
+
+### Alerts configured:
 ![alerts](/img/alerts.PNG)
 
 
 3. For Continuous Integration/Delivery [CircleCI](https://circleci.com/) has been used. The [file](https://github.com/CruzanCaramele/hello-world/blob/master/circleci.yml) runs a test for the node application and also builds a new docker image to be pushed into docker hub to keep the image updated.
+
+To properly implement CI/CD for the application in this enviroment, I would propose the following process:
+
+Git Push --> Run CI Tests --> Build Docker Image --> CI push Image to Dockerhub
+
+Then:
+CI Updates deployments of kubernetes --> updates rolls (vis pods) --> application is live
+
+
 
